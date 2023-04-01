@@ -1,9 +1,25 @@
+// Library
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { routes } from "@routes/routesConfig";
 // Components
-import PeoplePage from '@containers/PeoplePage/PeoplePage';
+import Header from "../Header/Header";
 
 const App = () => {
-  return(
-    <PeoplePage></PeoplePage>
+  return (
+    <BrowserRouter>
+      <Header></Header>
+
+      <Routes>
+        {routes.map((route, index) => {
+          return <Route
+            key={index}
+            path={route.path}
+            element={route.element}
+            exact={route.exact}
+          />
+        })}
+      </Routes>
+    </BrowserRouter>
   )
 }
 
