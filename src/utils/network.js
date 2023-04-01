@@ -9,6 +9,6 @@ export const getApiResource = async (url) => {
 
         return await response.json();
     } catch (error) {
-        throw error;
+        return false;
     }
 }
