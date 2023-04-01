@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { getApiResource } from "../../utils/network";
-import { API_PEOPLE } from "../../constants/api";
-import { getPeopleId, getPeopleImg } from "../../services/getPeopleData";
-import PeopleList from "../../components/PeoplePage/PeopleList/PeopleList";
-import { withErrorApi } from "../../hoc-helpers/withErrorApi";
+import { getApiResource } from "@utils/network";
+import { API_PEOPLE } from "@constants/api";
+import { getPeopleId, getPeopleImg } from "@services/getPeopleData";
+import PeopleList from "@components/PeoplePage/PeopleList/PeopleList";
+import { withErrorApi } from "@hoc-helpers/withErrorApi";
 
 
 const PeoplePage = ({ setErrorApi }) => {
@@ -11,7 +11,7 @@ const PeoplePage = ({ setErrorApi }) => {
     const [people, setPeople] = useState(null);
 
     const getResource = async (url) => {
-        const response = await getApiResource(1+url);
+        const response = await getApiResource(url);
 
         if (response) {
             const peopleList = response.results.map(({ name, url }) => {

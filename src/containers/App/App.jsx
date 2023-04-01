@@ -1,5 +1,5 @@
-import { getApiResource } from '../../utils/network';
-import PeoplePage from '../PeoplePage/PeoplePage';
+import { getApiResource } from '@utils/network';
+import PeoplePage from '@containers/PeoplePage/PeoplePage';
 
 getApiResource();
 
