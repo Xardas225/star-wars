@@ -1,7 +1,5 @@
-import { getApiResource } from '@utils/network';
+// Components
 import PeoplePage from '@containers/PeoplePage/PeoplePage';
-
-getApiResource();
 
 const App = () => {
   return(
