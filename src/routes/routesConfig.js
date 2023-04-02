@@ -2,6 +2,7 @@
 import HomePage from '@containers/HomePage';
 import PeoplePage from '@containers/PeoplePage';
 import VehiclesPage from "@containers/VehiclesPage"; 
+import NotFoundPage from "@containers/NotFoundPage";
 
 export const routes = [
     {
@@ -18,5 +19,10 @@ export const routes = [
         path: '/people',
         exact: true,
         element: <PeoplePage/>
+    },
+    {
+        path: '*',
+        exact: false,
+        element: <NotFoundPage/>
     }
 ]
