@@ -7,6 +7,11 @@ import {
   SWAPI_PEOPLE,
 } from "@constants/api";
 
+/**
+ * @param {String} url 
+ * @param {String} category 
+ * @returns {String} - id 
+ */
 const getId = (url, category) => {
   const id = url.replace(HTTPS + SWAPI_ROOT + category, "").replace(/\//g, "");
   return id;
