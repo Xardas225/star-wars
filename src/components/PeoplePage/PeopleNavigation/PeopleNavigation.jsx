@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import UiButton from '@ui/UiButton/UiButton';
 import { Link } from 'react-router-dom';
 
 const PeopleNavigation = ({
@@ -9,25 +10,25 @@ const PeopleNavigation = ({
     return (
         <>
             <Link to={`/people/?page=${+counterPage - 1}`}>
-                <button
+                <UiButton
+                    text="Previous"
                     disabled={!prevPage}
-                >
-                    Prev
-                </button>
+                />
             </Link>
             <Link to={`/people/?page=${+counterPage + 1}`}>
-                <button
+                <UiButton
+                    text="Next"
                     disabled={!nextPage}
-                >
-                    Next
-                </button>
+                />
             </Link>
         </>
     )
 }
 
 PeopleNavigation.propTypes = {
-    counterPage: PropTypes.number
+    counterPage: PropTypes.number,
+    nextPage: PropTypes.string,
+    prevPage: PropTypes.string,
 }
 
 export default PeopleNavigation;
