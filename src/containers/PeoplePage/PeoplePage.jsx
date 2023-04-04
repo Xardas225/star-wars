@@ -56,12 +56,12 @@ const PeoplePage = ({ setErrorApi }) => {
 
     return (
         <>
+            {people && <PeopleList people={people} />}
             <PeopleNavigation  
                 counterPage={counterPage}
                 nextPage={nextPage}
                 prevPage={prevPage}
             />
-            {people && <PeopleList people={people} />}
         </>
     )
 }
